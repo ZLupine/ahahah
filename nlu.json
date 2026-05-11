@@ -23,26 +23,94 @@
     }
   },
   "intents" : [ {
-    "path" : "/пока",
+    "path" : "/hello",
     "enabled" : true,
     "shared" : false,
     "phrases" : [ {
-      "text" : "пока"
-    } ],
-    "classificationRules" : {
-      "refs" : [ ]
-    },
-    "priority" : 0
-  }, {
-    "path" : "/привет",
-    "enabled" : true,
-    "shared" : false,
-    "phrases" : [ {
+      "text" : "добрый вечер"
+    }, {
+      "text" : "доброе утро"
+    }, {
+      "text" : "добрый день"
+    }, {
+      "text" : "hi"
+    }, {
+      "text" : "hello"
+    }, {
+      "text" : "здравствуй"
+    }, {
       "text" : "привет"
     } ],
     "classificationRules" : {
       "refs" : [ ]
     },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/weather",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "жарк"
+    }, {
+      "text" : "холод"
+    }, {
+      "text" : "снег"
+    }, {
+      "text" : "дожд"
+    }, {
+      "text" : "прогноз"
+    }, {
+      "text" : "температур"
+    }, {
+      "text" : "weather"
+    }, {
+      "text" : "погод"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/currency",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "курс"
+    }, {
+      "text" : "валют"
+    }, {
+      "text" : "доллар"
+    }, {
+      "text" : "евро"
+    }, {
+      "text" : "usd"
+    }, {
+      "text" : "eur"
+    }, {
+      "text" : "обмен"
+    }, {
+      "text" : "сколько стоит"
+    }, {
+      "text" : "юань"
+    }, {
+      "text" : "cny"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/NoMatch",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
     "priority" : 0
   } ],
   "entities" : [ ],
