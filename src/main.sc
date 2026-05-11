@@ -24,7 +24,7 @@ theme: /
         go!: /currency
         
     state: /NoMatch
-        event!: /NoMatch
+        intent!: /NoMatch
         a:
             Я не понял запрос.
             Попробуйте спросить:
