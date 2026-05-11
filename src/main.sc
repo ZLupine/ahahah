@@ -5,47 +5,26 @@ theme: /
 
     state: /hello
 
-        q!: привет
-        q!: здравствуй
-        q!: hello
-        q!: hi
-        q!: добрый день
+        q!: *
 
-        a:
-            Привет!
-            Я бот-помощник.
-            Могу рассказать:
-            - погоду
-            - курс валют
+        if: !$request.query
+            a:
 
+        elseif: $request.query.toLowerCase().match(/привет|здравствуй|hello|hi|добрый день/)
+            a:
+                Привет!
+                Я бот-помощник.
+                Могу рассказать:
+                - погоду
+                - курс валют
 
-    state: /weather_router
+        elseif: $request.query.toLowerCase().match(/погода|weather|температура|прогноз/)
+            go!: /weather
 
-        q!: *погод*
-        q!: *прогноз*
-        q!: *температур*
+        elseif: $request.query.toLowerCase().match(/курс|валют|доллар|евро|currency|usd|eur/)
+            go!: /currency
 
-        go!: /weather
-
-
-    state: /currency_router
-
-        q!: *курс*
-        q!: *валют*
-        q!: *доллар*
-        q!: *евро*
-        q!: *usd*
-        q!: *eur*
-
-        go!: /currency
-
-
-    state: /NoMatch
-
-        event!: noMatch
-
-        if: $request.query
-
+        else
             a:
                 Я не понял запрос.
 
