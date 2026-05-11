@@ -1,7 +1,6 @@
 theme: /
 
     state: /currency
-        q!: *
 
         if: $request.query.toLowerCase().match(/доллар|usd/)
             a:

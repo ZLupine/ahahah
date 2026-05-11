@@ -1,7 +1,6 @@
 theme: /
 
     state: /weather
-        q!: *
 
         if: $request.query.toLowerCase().match(/москва/)
             a:
