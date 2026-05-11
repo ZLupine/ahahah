@@ -106,7 +106,9 @@
     "path" : "/NoMatch",
     "enabled" : true,
     "shared" : false,
-    "phrases" : [ ],
+    "phrases" : [ {
+      "text" : "*"
+    } ],
     "classificationRules" : {
       "refs" : [ ]
     },
