@@ -5,9 +5,12 @@ theme: /
 
     state: /hello
 
-        event!: text
+        q!: *
 
-        if: $request.query.toLowerCase().match(/привет|здравствуй|hello|hi|добрый день|доброе утро|добрый вечер/)
+        if: !$request.query || $request.query == "/start" || $request.query == "start"
+            a:
+
+        elseif: $request.query.toLowerCase().match(/привет|здравствуй|hello|hi|добрый день|доброе утро|добрый вечер/)
             a:
                 Привет!
                 Я бот-помощник.
