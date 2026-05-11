@@ -1,5 +1,4 @@
 theme: /
-
 state: /weather
     intent!: /weather
     q!: *(погод/weather/температур/прогноз/дожд/снег/холод/жарк)*

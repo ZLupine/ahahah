@@ -1,5 +1,4 @@
 theme: /
-
 state: /currency
     intent!: /currency
     q!: *(курс/валют/доллар/евро/usd/eur/обмен/сколько стоит/юань/cny)*
