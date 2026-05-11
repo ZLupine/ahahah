@@ -10,7 +10,7 @@ theme: /
         if: !$request.query
             a:
 
-        elseif: $request.query.toLowerCase().match(/привет|здравствуй|hello|hi|добрый день/)
+        elseif: $request.query.toLowerCase().match(/привет|здравствуй|hello|hi|добрый день|доброе утро|добрый вечер/)
             a:
                 Привет!
                 Я бот-помощник.
@@ -18,13 +18,13 @@ theme: /
                 - погоду
                 - курс валют
 
-        elseif: $request.query.toLowerCase().match(/погода|weather|температура|прогноз/)
+        elseif: $request.query.toLowerCase().match(/погод|weather|температур|прогноз|дожд|снег|холод|жарк/)
             go!: /weather
 
-        elseif: $request.query.toLowerCase().match(/курс|валют|доллар|евро|currency|usd|eur/)
+        elseif: $request.query.toLowerCase().match(/курс|валют|доллар|евро|usd|eur|обмен|сколько стоит|юань|cny/)
             go!: /currency
 
-        else
+        else:
             a:
                 Я не понял запрос.
 
