@@ -25,6 +25,7 @@ theme: /
         
     state: /NoMatch
         intent!: /NoMatch
+        q!: *
         a:
             Я не понял запрос.
             Попробуйте спросить:
