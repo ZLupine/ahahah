@@ -1,23 +1,33 @@
-require: slotfilling/slotFilling.sc
-  module = sys.zb-common
+require: weather.sc
+require: currency.sc
+
 theme: /
 
-    state: Start
-        q!: $regex</start>
-        a: Начнём.
+    state: /hello
+        q!: *
 
-    state: Hello
-        intent!: /привет
-        a: Привет привет
+        if: $request.query.toLowerCase().match(/привет|здравствуй|hello|hi|добрый день/)
+            a:
+                Привет!
+                Я бот-помощник.
+                Могу рассказать:
+                - погоду
+                - курс валют
 
-    state: Bye
-        intent!: /пока
-        a: Пока пока
+        elseif: $request.query.toLowerCase().match(/погода|weather|температура|прогноз/)
+            go!: /weather
 
-    state: NoMatch
-        event!: noMatch
-        a: Я не понял. Вы сказали: {{$request.query}}
+        elseif: $request.query.toLowerCase().match(/курс|валют|доллар|евро|currency|usd|eur/)
+            go!: /currency
 
-    state: Match
-        event!: match
-        a: {{$context.intent.answer}}
+        else:
+            go!: /NoMatch
+
+
+    state: /NoMatch
+        a:
+            Я не понял запрос.
+
+            Попробуйте спросить:
+            - Какая погода?
+            - Курс доллара
