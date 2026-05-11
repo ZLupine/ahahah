@@ -2,6 +2,7 @@ require: weather.sc
 require: currency.sc
 
 theme: /
+
     state: /hello
         intent!: /hello
         q!: *start
@@ -13,19 +14,8 @@ theme: /
             - погоду
             - курс валют
     
-    state: /weather
-        intent!: /weather
-        q!: *(погод/weather/температур/прогноз/дожд/снег/холод/жарк)*
-        go!: /weather
-     
-    state: /currency
-        intent!: /currency
-        q!: *(курс/валют/доллар/евро/usd/eur/обмен/сколько стоит/юань/cny)*
-        go!: /currency
-        
     state: /NoMatch
-        intent!: /NoMatch
-        q!: *
+        event: noMatch
         a:
             Я не понял запрос.
             Попробуйте спросить:
