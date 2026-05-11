@@ -21,29 +21,28 @@ theme: /
 
     state: /weather_router
 
-        q!: погода
-        q!: прогноз
-        q!: температура
-        q!: weather
+        q!: *погод*
+        q!: *прогноз*
+        q!: *температур*
 
         go!: /weather
 
 
     state: /currency_router
 
-        q!: курс
-        q!: валюта
-        q!: доллар
-        q!: евро
-        q!: usd
-        q!: eur
+        q!: *курс*
+        q!: *валют*
+        q!: *доллар*
+        q!: *евро*
+        q!: *usd*
+        q!: *eur*
 
         go!: /currency
 
 
     state: /NoMatch
 
-        q!: *
+        event!: noMatch
 
         a:
             Я не понял запрос.
